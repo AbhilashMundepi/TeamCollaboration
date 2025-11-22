@@ -14,9 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 // routes
-app.use('/api/boards', boardsRoute);
-app.use('/api/lists', listsRoute);
-app.use('/api/tasks', tasksRoute);
+app.use('/boards', boardsRoute);
+app.use('/lists', listsRoute);
+app.use('/tasks', tasksRoute);
 
 app.get('/', (req, res) => res.json({ ok: true, msg: 'Simple Board API' }));
 
