@@ -19,7 +19,7 @@ app.use('/boards', boardsRoute);
 app.use('/lists', listsRoute);
 app.use('/tasks', tasksRoute);
 
-// Serve frontend in production
+
 const frontendPath = path.join(__dirname, '../Frontend/dist'); // Vite build folder
 app.use(express.static(frontendPath));
 
@@ -27,7 +27,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
-// Connect DB and start server
 const PORT = process.env.PORT || 5000;
 
 connectDB(process.env.MONGO_URL || 'mongodb://localhost:27017/simple_board')
