@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import API from '../Services/api';
-import ListColumn from '../components/ListColumn';
+import ListColumn from '../Components/ListColumn';
 
 function BoardPage({ board, goBack }) {
   const [lists, setLists] = useState([]);
